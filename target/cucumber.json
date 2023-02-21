@@ -1,0 +1,117 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2023-02-21T00:14:08.516Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2073000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.BackGroundStepDefinition.beforeRun()"
+            }
+          }
+        ],
+        "line": 5,
+        "name": "Sky Blue Background",
+        "description": "",
+        "id": "background-color-change-validation;sky-blue-background",
+        "after": [
+          {
+            "result": {
+              "duration": 693000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.BackGroundStepDefinition.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 533000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "\"Set SkyBlue Background\" button exists",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Set SkyBlue Background\"",
+                  "offset": 0
+                }
+              ],
+              "location": "steps.BackGroundStepDefinition.button_exists(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5098000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I click on the \"button\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"button\"",
+                  "offset": 15
+                }
+              ],
+              "location": "steps.BackGroundStepDefinition.i_click_on_the(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 312000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the background color will change to \"sky blue\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"sky blue\"",
+                  "offset": 36
+                }
+              ],
+              "location": "steps.BackGroundStepDefinition.the_background_color_will_change_to(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@BachGroundColorFeature"
+          },
+          {
+            "name": "@Scenario1"
+          }
+        ]
+      }
+    ],
+    "name": "Background color change validation",
+    "description": "",
+    "id": "background-color-change-validation",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/SkyBleuFeature.feature",
+    "tags": [
+      {
+        "name": "@BachGroundColorFeature",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
