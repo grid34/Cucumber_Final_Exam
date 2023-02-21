@@ -20,9 +20,9 @@ public class BackGroundColorPage {
 		this.driver = driver;
 	}
 
-	@FindBy(how = How.CSS, using = "button[onclick=\"myFunctionSky()\"]")
+	@FindBy(how = How.CSS, using = "button[onclick='myFunctionSky()']")
 	WebElement SkyBlueButtonPosition;
-	@FindBy(how = How.CSS, using = "body[style = 'background-color: skyblue;']")
+	@FindBy(how = How.CSS, using = "button[onclick='myFunctionWhite()']")
 	WebElement SkyBlueBackgroundColor;
 	@FindBy(how = How.CSS, using = "button[onclick=\"myFunctionWhite()\"]")
 	WebElement WhiteButtonPosition;

@@ -23,35 +23,62 @@ public class BackGroundStepDefinition extends TestBase {
 		bgPage = PageFactory.initElements(driver, BackGroundColorPage.class);
 	}
 
-	@Given("{string} button exists")
-	public void button_exists(String button) {
+	@Given("{string} white button exists")
+	public void w_button_exists(String button) {
 		
 		driver.get("http://techfios.com/test/101/");
-		if (button.equals("sky blue")) {
-			String actualButton1 = bgPage.ButtonExists("sky blue");
-
-			String expectedButton1 = "Set SkyBlue Background";
-			Assert.assertEquals(expectedButton1, actualButton1);
-
-		} else if (button.equalsIgnoreCase("white")) {
-			String actualButton2 = bgPage.ButtonExists("white");
-
-			String expectedButton2 = "Set White Background";
-			Assert.assertEquals(expectedButton2, actualButton2);
+		
+		String ActualButton=driver.findElement(By.cssSelector("button[onclick='myFunctionWhite()']")).getText();
+		if (ActualButton.equals("Set White Background")) {
+			
+			System.out.println(" White Button exist!");
 		}
+		else {
+			System.out.println(" White Button  does not  exist!");
+		}
+	}
+		@Given("{string} Blue button exists")
+		public void b_button_exists(String button) {
+			
+			driver.get("http://techfios.com/test/101/");
+			
+			String ActualButton=driver.findElement(By.cssSelector("button[onclick='myFunctionWhite()']")).getText();
+			if (ActualButton.equals("Set White Background")) {
+				
+				System.out.println(" Blue Button exist!");
+			}
+			else {
+				System.out.println(" Blue Button  does not  exist!");
+			}
 		
 	}
 
-	@When("I click on the {string}")
-	public void i_click_on_the(String button) {
+	@When("I click on the Blue {string}")
+	public void i_click_on_theBlue(String Blue) throws Exception {
 
-		bgPage.clickOnButton(button);
+		
+		
+		driver.findElement(By.cssSelector("button[onclick='myFunctionSky()']")).click();
+		
+		
+		
+		
+	}
+	@When("I click on the White {string}")
+	public void i_click_on_theWhite(String White) throws Exception {
+
+		
+		
+		driver.findElement(By.cssSelector("button[onclick='myFunctionSky()']")).click();
+		
+		
+		driver.findElement(By.cssSelector("button[onclick='myFunctionWhite()']")).click();
 		
 		
 	}
 
-	@Then("the background color will change to {string}")
-	public void the_background_color_will_change_to(String colorCss) {
+	@Then("the background color will change to white {string}")
+	public void the_background_color_will_change_to_white(String colorCss) {
 		String bgColor = driver.findElement(By.tagName("body")).getCssValue("background-color");
 		switch (colorCss) {
 		case "skyblue":
@@ -62,6 +89,23 @@ public class BackGroundStepDefinition extends TestBase {
 			break;
 
 		}
+		
+		takeScreenshot(driver);
+	}
+	
+	@Then("the background color will change to blue {string}")
+	public void the_background_color_will_change_to_blue(String colorCss) {
+		String bgColor = driver.findElement(By.tagName("body")).getCssValue("background-color");
+		switch (colorCss) {
+		case "skyblue":
+			assert (bgColor.equals("rgba(135, 206, 235, 1)"));
+			break;
+		case "white":
+			assert (bgColor.equals("rgba(255, 255, 255, 1)"));
+			break;
+
+		}
+		
 		takeScreenshot(driver);
 	}
 

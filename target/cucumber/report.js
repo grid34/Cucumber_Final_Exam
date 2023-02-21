@@ -10,7 +10,7 @@ formatter.feature({
   ]
 });
 formatter.scenario({
-  "name": "Sky Blue Background",
+  "name": "White Background Change",
   "description": "",
   "keyword": "Scenario",
   "tags": [
@@ -18,7 +18,7 @@ formatter.scenario({
       "name": "@BachGroundColorFeature"
     },
     {
-      "name": "@Scenario1"
+      "name": "@Scenario2"
     }
   ]
 });
@@ -26,31 +26,31 @@ formatter.before({
   "status": "passed"
 });
 formatter.step({
-  "name": "\"Set SkyBlue Background\" button exists",
+  "name": "\"Set White Background\" white button exists",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "steps.BackGroundStepDefinition.button_exists(java.lang.String)"
+  "location": "steps.BackGroundStepDefinition.w_button_exists(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I click on the \"button\"",
+  "name": "I click on the White \"White\"",
   "keyword": "When "
 });
 formatter.match({
-  "location": "steps.BackGroundStepDefinition.i_click_on_the(java.lang.String)"
+  "location": "steps.BackGroundStepDefinition.i_click_on_theWhite(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "the background color will change to \"sky blue\"",
+  "name": "the background color will change to white \"white\"",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "steps.BackGroundStepDefinition.the_background_color_will_change_to(java.lang.String)"
+  "location": "steps.BackGroundStepDefinition.the_background_color_will_change_to_white(java.lang.String)"
 });
 formatter.result({
   "status": "passed"

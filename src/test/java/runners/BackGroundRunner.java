@@ -9,7 +9,7 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions( 
 		features="src\\test\\java\\features\\SkyBleuFeature.feature", 
 		glue="steps",
-		tags="@Scenario1",
+		tags="@Scenario2",
 		monochrome=true, 
 		dryRun=false,    
 		plugin = {
